@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <main class= "container">
+    <main class= "container-fluid">
 
         <!-- JUMPOTRON -->
 
@@ -26,45 +26,54 @@
         </header>
 
         <!-- USER INPUTS -->
-        <div class="row">
-            <h3 class="col-md-12">Search Parameters</h3>
-        </div>
-
-        <div class="row">
-            <div class="form-group col-md-8">
-                <input type="text" class="form-control" id="search-term" placeholder="Search Term">
+        <div id="body">
+            <div class="row">
+                <h3 class="col-md-12">Search Parameters</h3>
             </div>
 
-            <div class="form-group col-md-4">
-                <select class="form-control" id="num-articles">
-                  <option id="1">1 Article</option>
-                  <option id="5">5 Articles</option>
-                  <option id="10">10 Articles</option>
-                </select>
-              </div>
-        </div>
+            <div class="row">
+                <div class="form-group col-md-8">
+                    <input type="text" class="form-control" id="search-term" placeholder="Search Term">
+                </div>
 
-        <div class="row">
-            <div class="form-group col-md-6">
-                <input type="number" class="form-control" id="start-year" placeholder="Start Year (Optional)">
+                <div class="form-group col-md-4">
+                    <select class="form-control" id="num-articles">
+                    <option id="1">1 Article</option>
+                    <option id="5">5 Articles</option>
+                    <option id="10">10 Articles</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="form-group col-md-6">
-                <input type="number" class="form-control" id="end-year" placeholder="End Year (Optional)">
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <input type="number" class="form-control" id="start-year" placeholder="Start Year (Optional)">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <input type="number" class="form-control" id="end-year" placeholder="End Year (Optional)">
+                </div>
+            </div>
+            <br>
+
+            <!-- BUTTONS -->
+
+            <div class="row">
+                <button id="search-button">search</button>
+                <button id="clear-button">clear</button>
+            </div>
+
+            <!-- ARTICLES  -->
+
+            <div id="top-articles" class="row">
+                <h3 class="col-md-12">Top Articles</h3>
             </div>
         </div>
-        <br>
-
-        <!-- ARTICLES  -->
-
-        <div id="top-articles" class="row">
-            <h3 class="col-md-12">Top Articles</h3>
-        </div>
-
     </main>
 
 </body>
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>

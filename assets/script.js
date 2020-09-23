@@ -1,15 +1,19 @@
 //To remove any potential syncing issues on load
 $(document).ready(function(){
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+var searchTerm = "us";
 var APIkey = "XH478zGX5cbqVyjYLO4MAVbbq6HxPyPo";
-var queryURL = "https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=" + APIkey;
+var queryURL = "https://api.nytimes.com/svc/topstories/v2/" + searchTerm + ".json?api-key=" + APIkey;
 
-$.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function(response) {
+  $("#search-button").on("click", function() {
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function(response) {
 
-    console.log(response);
+        console.log(queryURL);
+        console.log(response);
 
-}
+    })
+  })
+});
